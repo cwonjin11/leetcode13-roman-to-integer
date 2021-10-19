@@ -12,13 +12,18 @@ symbols = {
 
 const romanToInt = (s) => {
     value = 0;
-    for(let i = 0; i < s.length; i+=1){
+    for(let i = 0; i < s.length; i++){
+        console.log(s, "👀input string")
         symbols[s[i]] < symbols[s[i+1]] ? value -= symbols[s[i]]: value += symbols[s[i]]
+        console.log(symbols[s[i]])
+        console.log(symbols[s[i+1]])
+        console.log(value -= symbols[s[i]], "current integer is less than next integer" )
+        console.log(value += symbols[s[i]], "else" )
     }
     return value
 };
 console.log(romanToInt("MCMXCVI"))
-console.log(romanToInt("MCMXCIV"))
+// console.log(romanToInt("MCMXCIV"))
 // console.log(romanToInt(""))
 
 
